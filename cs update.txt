@@ -1,0 +1,38 @@
+e26b2ffb2ee711fc7b04d62911580560794ee4fa9b7fcfade65ee6ff2eed0274
+68c5d6b38c9dd9e9e1e888386025352811147028
+753585e5e099b192cf8d7593dd5ef4bf
+
+
+
+Hi Alankrit,
+Latest update on Safend (45 users are pending now)
+
+rani-16
+rohit-13
+sujit-9
+saihaj-5
+ritu-2
+
+
+Hi Ganesh\Vishnu,
+
+I have talked with Crowdstrike team, they told that local logging wouldn't really help in this scenario. They told if we can reproduce the issue, we have an application compatibility guide that will allow to collect logs during the issue, but as we mention in the case we are unable to reproduce.
+
+So,in this scenario logs will not help, but the sensor already takes logs (CSWinDiagnostic). It doesn't take any logs related to a shutdown, and as mentioned this host would show a detection in the Falcon Console if the sensor was doing anything to block/quarantine anything on that host.
+
+So don't see any real reason to suspect CrowdStrike Falcon is in play here, if we were blocking and/or quarantining anything, there would be evidence, detections, quarantined files, etc.
+Matt M
+7:41 PM
+could you please explain me about application compatibility guide?
+7:43 PM
+Surely, that guide can be found here: https://supportportal.crowdstrike.com/s/article/Troubleshooting-Windows-Sensors-Application-Compatibility-Issues but to be clear: The information we advise you to collect in this guide is the minimum necessary data required to begin our investigation or to escalate to Engineering. Our work does not truly begin until we have this from you. Therefore, we advise you to treat all requested information in this guide as absolutely mandatory.
+
+
+If you are able to replicate and collect logs (as well as perform the other steps in that guide), please update your original case with those logs and results.
+7:44 PM
+M
+Is there anything else I can help you with right now?
+
+
+
+I consulted our escalation team and So,in this scenario logs will not help, but the sensor already takes logs (CSWinDiagnostic). It doesn't take any logs related to a shutdown, and as mentioned this host would show a detection in the Falcon Console if the sensor was doing anything to block/quarantine anything on that host

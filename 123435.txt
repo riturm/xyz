@@ -1,0 +1,35 @@
+version-8.7.0.372
+
+
+version on console- 8.6.2.26
+
+mac address- 74-4C-A1-DF-A5-24
+
+JOYF-SOYZ-FERJ-SAHT
+
+
+1. Reboot the system into safe mode
+2. Click on Start > Run
+3. Type 'regedit' and press enter
+4. Browse to:
+  A. 32-bit endpoints: HKEY_LOCAL_MACHINE > Software > Bit9 > Parity Agent > ServerSettings
+  B. 64-bit endpoints: HKEY_LOCAL_MACHINE > Software > Wow6432Node > Bit9 > Parity Agent > ServerSettings
+5. Click Edit > New > String Value
+6. Name the new key (string value): B9_UNINSTALL_KEY
+7. Set the value to the uninstall key generated below
+8. Set the registry key B9_HOST_ENFORCEMENT to 80
+9. Exit regedit
+10. Type the following in to an admin command prompt to disable service startup:
+  sc config "parity" start=disabled
+11. Reboot
+12. It should now be possible to uninstall via the control panel
+
+
+Boot the machine into safe mode. 
+Open an admin CMD prompt
+Run commands:
+sc config parity start= disabled
+sc config paritydriver start= disabled
+Boot back into regular windows
+Run the uninstall command line in an administrative command prompt:
+msiexec.exe /x {GUID} FORCE=1
